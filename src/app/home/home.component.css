@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-image: url("/assets/images/hero-banner.png");
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.promoted {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  border-top: 2px solid #888;
+  border-bottom: 2px solid #888;
+  padding: 10px 150px 10px 150px;
+}
+
+.promoted img {
+  width: 150px;
+  height: 150px;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 40px 0 40px 0;
+}
+
+.promo-main-text {
+  font-size: 24px;
+  text-align: center;
+}
+

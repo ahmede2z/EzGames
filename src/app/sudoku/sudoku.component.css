@@ -1,0 +1,117 @@
+/* General styling improvements */
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.sudoku-row {
+  display: contents;
+}
+
+.sudoku-cell {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Animation for color change */
+}
+
+.subgrid-border-right {
+  border-right: 2px solid black;
+}
+
+.subgrid-border-bottom {
+  border-bottom: 2px solid black;
+}
+
+.static-cell {
+  background-color: lightgray;
+}
+
+.invalid {
+  background-color: #f8d7da;
+  /* Red color for invalid cells */
+  animation: shake 0.5s;
+  /* Shake animation for invalid moves */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.highlighted {
+  background-color: rgba(255, 255, 0, 0.409);
+  /* Highlight selected cell */
+}
+
+.highlight-row {
+  background-color: rgba(255, 0, 0, 0.3);
+  /* Light red for row highlight */
+}
+
+.highlight-column {
+  background-color: rgba(255, 0, 0, 0.3);
+  /* Light red for column highlight */
+}
+
+.number-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.number-buttons button {
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.number-buttons button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.selected-number {
+  background-color: #007bff;
+  color: white;
+}
+
+.timer {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
